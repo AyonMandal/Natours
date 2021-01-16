@@ -1,0 +1,184 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+html{
+    font-size: 10px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 2.0rem;
+    font-family: "Lato";
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #777;
+    line-height: 1.7;
+}
+
+/* editing the header part */
+.header{
+    background-image: linear-gradient(to bottom right,#59db42dc,#21cf5bb9),url(../img/hero.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 95vh;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    position: relative;
+}
+
+/* designing the logo*/
+.header__logo-white{
+    height: 4.5rem;
+    width: auto;
+    position: absolute;
+    top: 4.0rem;
+    left: 4.0rem;
+}
+
+.header__logo-white:hover{
+    animation: pulse; 
+    animation-duration: 1s; 
+}
+
+/* designing the heading section */
+.header__main-text{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.header-first{
+    padding: 6rem 0px;
+    margin-top: 25rem;
+}
+
+.header-first--main-heading{
+    display: block;
+    color: #fff;
+    letter-spacing: 2.6rem;
+    text-transform: uppercase;
+    font-size: 5.0rem;
+    font-weight: 400;
+    animation: in-left 1s ease-out;
+    
+    
+}
+
+.header-first--sub-heading{
+    display: block;
+    color: #fff;
+    letter-spacing: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    animation: in-right 1s ease-out;
+    
+}
+
+/*animations for heading part*/
+@keyframes in-left{
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    80%{
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/*animations for heading part*/
+@keyframes in-right{
+    0% {
+        transform: translateX(+100px);
+        opacity: 0;
+    }
+
+    80%{
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/*styling the button*/
+.btn:link,
+.btn:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: .2rem solid #fff;
+    border-radius: 10rem;
+    padding: 1rem 2.5rem;
+    letter-spacing: .3rem;
+    display: inline-block;
+    position: relative;
+    transition: all .2s;
+    animation : fadeInUpBig;
+    animation-duration: 2s;
+    
+}
+
+.btn--white{
+    background-color: #fff;
+    color: #777;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 1.4rem 1.2rem -.4rem rgba(0,0,0,0.75);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 1rem 1.2rem -.4rem rgba(0,0,0,0.75);
+}
+
+/* animation in css button*/
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: -1;
+}
+
+.btn--white::after{
+    background-color: #fff;
+    color: #777;
+    transition: all .5s;
+}
+
+.btn:hover::after{
+    transform: scale(1.5,1.5);
+    opacity: 0;
+}
+
+
+
+
+
