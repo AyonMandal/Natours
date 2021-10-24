@@ -1,0 +1,33 @@
+html{
+    font-size: 62.5%;
+
+    @include for-size(tab-land){
+        font-size: 60%;
+    }
+
+    @include for-size(tab-port){
+        font-size: 50%;
+    }
+
+    @include for-size(mobile){
+        font-size: 40%;
+    }
+
+    @include for-size(large-screen){
+        font-size: 75%;
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 2.0rem;
+
+    @include for-size(tab-port){
+        padding: 0;
+    }
+}

@@ -1,0 +1,93 @@
+.popup{
+
+    background-color: rgba($color-black, .85);
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+
+    }
+
+    &:target &__section{
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    &__section{
+        width: 85%;
+        background-color: $color-white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.2);
+        display: table;
+        border-radius: 4px;
+        transition: all .4s;
+    }
+
+    
+
+    &__left{
+        width: 33%;
+        display: table-cell;
+
+        &--image{
+            width: 100%;
+            display: block;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+    }
+
+    &__right{
+        width: 67%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 2.5rem;
+         
+        &--text{
+            columns: 2;
+            column-rule: 1px solid $color-grey-dark;
+            column-gap: 4rem;
+            margin-bottom: 3rem;
+            hyphens: auto;
+            
+        }
+        
+    }
+
+    &__close{
+        text-decoration: none;
+        font-size: 3rem;
+        position: absolute;
+        top: 2.5rem;
+        right: 3.5rem;
+        cursor: pointer;
+        display: inline-block;
+
+        &:link,
+        &:visited{
+            color: $color-grey-dark-2;
+            transition: all .3s;
+
+        }
+
+        &:hover,
+        &:active{
+            color: $color-dark-green
+        }
+        
+    }
+}

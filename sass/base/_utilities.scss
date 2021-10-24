@@ -1,0 +1,37 @@
+.util-ele-center{
+    text-align: center;
+}
+
+.util-margin_btm-big{
+    margin-bottom: 8rem;
+
+    @include for-size(tab-port){
+        margin-bottom: 4rem !important;
+    }
+
+}
+
+.util-margin_btm-small{
+    margin-bottom: 1.25rem;
+
+    @include for-size(tab-port){
+        margin-bottom: 1rem !important;
+    }
+}
+
+.util-margin_top-big{
+    margin-top: 10rem;
+}
+
+.util-margin_btm-med{
+    margin-bottom: 2rem;
+
+    @include for-size(tab-port){
+        margin-bottom: 1rem !important;
+    }
+}
+
+.util-ele-justify{
+    text-align: justify;
+}
+

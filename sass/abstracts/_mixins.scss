@@ -1,0 +1,39 @@
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+//Media Query Manager
+//0 - 600px : Mobile
+//600 - 900px : Tab Portait
+//900 - 1200px : Tab Landscape
+//1800 - Up :  Larger screen
+//1em = 16px
+//Lets write media query
+@mixin for-size($breakpoint) {
+    @if $breakpoint == mobile {
+        @media(max-width : 600px) {@content};
+    }
+
+    @if $breakpoint == tab-port {
+        @media(max-width : 900px){
+            @content
+        };
+    }
+
+    @if $breakpoint == tab-land {
+        @media(max-width : 1200px){
+            @content
+        };
+    }
+
+    @if $breakpoint == large-screen {
+        @media(min-width : 1800px){
+            @content
+        };
+    }
+    
+}

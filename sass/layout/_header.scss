@@ -1,0 +1,39 @@
+.header{
+    background-image: linear-gradient(to bottom right,$color-light-green,$color-dark-green),url(../img/hero-small.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 95vh;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    position: relative;
+
+    @media (min-resolution: 192dpi) and (min-width: 900px),
+        (min-width: 2000px){
+            background-image: linear-gradient(to bottom left,$color-light-green,$color-dark-green),url(../img/hero.jpg);
+        }
+
+    @include for-size(mobile){
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    }
+
+    &__logo-white{
+        height: 4.5rem;
+        width: auto;
+        position: absolute;
+        top: 4.0rem;
+        left: 4.0rem;
+
+        &:hover{
+            animation: pulse; 
+            animation-duration: 1s; 
+        }
+    }
+    
+    &__main-text{
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+        backface-visibility: hidden;
+        text-align: center;
+    }
+}
